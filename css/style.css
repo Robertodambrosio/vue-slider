@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider {
+    width: 55%;
+    height: 60vh;
+    position: relative
+}
+
+.thumbnails {
+    width: 15%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.item {
+    height: 60vh;
+    display: none;
+}
+
+.thumb {
+    height: calc(60vh / 5);
+    display: block;
+    filter: blur(2px);
+    padding: 5px
+}
+
+.item img,
+.thumb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+
+.thumbnails {
+    position: relative;
+    margin-left: 20px;
+}
+
+
+
+.prev,
+.next {
+    color: white;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: darkslategrey;
+    border-radius: 50%;
+    line-height: 30px;
+    cursor: pointer;
+    transform: translate(-50%, 0);
+}
+
+.prev {
+    top: 0.1%;
+}
+
+.next {
+    bottom: 0.1%;
+}
+
+.active {
+    display: block;
+}
+
+.thumb.active {
+    filter: blur(0);
+}
+
+.testo {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    color: white;
+    text-align: right;
+}
+
+.testo p {
+    font-size: 10px;
+    margin-top: 10px;
+}
