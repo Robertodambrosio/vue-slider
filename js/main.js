@@ -30,20 +30,28 @@ const app = new Vue({
         currentImg: 0,
     },
     methods: {
-        next: function () {
-            this.currentImg++;
-            this.currentTxt++
+        nextImg: function () {
+            if (this.currentImg == this.items.length - 1) {
+                this.currentImg = 0;
+            } else {
+                this.currentImg++;
+            }
+
         },
-        prev: function () {
-            this.currentImg--;
-            this.currentTxt--
+
+        prevImg: function () {
+            if (this.currentImg == 0) {
+                this.currentImg = this.items.length - 1;
+            } else {
+                this.currentImg--;
+            }
         },
-         setActiveClass: function(i) {
-             if (i == this.currentImg) {
-                 return  'active';
-             } else {
-                 return '';
-             }
-             }
+        setActiveClass: function (i) {
+            if (i == this.currentImg) {
+                return 'active';
+            } else {
+                return '';
+            }
+        }
     },
 })
