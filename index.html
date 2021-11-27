@@ -24,7 +24,7 @@
         </div>    
         <div class="thumbnails">
             <div class="thumbnails-container">
-                <div class="thumb" v-for="(element, i) in items" :class="setActiveClass(i)">
+                <div class="thumb" v-for="(element, i) in items" :class="setActiveClass(i)" @click="activeItem(i)">
                     <img :src="element.image">
                 </div>
 

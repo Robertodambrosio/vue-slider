@@ -52,6 +52,10 @@ const app = new Vue({
             } else {
                 return '';
             }
+        },
+        activeItem: function (i) {
+            this.currentImg = i;
         }
+        
     },
 })
